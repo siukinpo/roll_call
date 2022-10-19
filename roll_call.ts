@@ -13,8 +13,6 @@ async function autoRollCall() {
   await page.goto("https://student.tecky.io/");
   await page.waitForTimeout(1000);
   await page.click("button.p-3.btn.btn-primary");
-  //   await page.type("input#username.form-control", "siukinpo@gmail.com");
-  //   await page.type("input[name=username]", "siukinpo@gmail.com");
   page.on("popup", async (popup) => {
     await popup.waitForLoadState();
     await popup.title();
